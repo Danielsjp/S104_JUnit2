@@ -8,6 +8,7 @@ public class Principal {
 		//System.out.println(Lista.Calendario.get(0));
 		//System.out.println(Lista.Calendario.size());
 		prueba.agregar();
+		
 	}
 
 }

@@ -50,6 +50,13 @@ public class Lista {
 		Calendario.add(mes11);
 		Calendario.add(mes12);
 	}
+
+
+	public boolean isEmpty() {
+		if (Calendario.size()==0) {return true;}
+		else {return false;}
+	}
+	
 	
 	
 	
