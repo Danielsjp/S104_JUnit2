@@ -15,10 +15,11 @@ public class Lista {
 	protected String mes10;
 	protected String mes11;
 	protected String mes12;
-	
+
 	protected static ArrayList<String> Calendario = new ArrayList<String>();
-	
-	public Lista(String a, String b, String c, String d, String e, String f, String g, String h, String i, String j, String k, String l) {
+
+	public Lista(String a, String b, String c, String d, String e, String f, String g, String h, String i, String j,
+			String k, String l) {
 		mes1 = a;
 		mes2 = b;
 		mes3 = c;
@@ -31,12 +32,11 @@ public class Lista {
 		mes10 = j;
 		mes11 = k;
 		mes12 = l;
-		
+
 	}
-	
 
 	public void agregar() {
-		
+
 		Calendario.add(mes1);
 		Calendario.add(mes2);
 		Calendario.add(mes3);
@@ -51,13 +51,12 @@ public class Lista {
 		Calendario.add(mes12);
 	}
 
-
 	public boolean isEmpty() {
-		if (Calendario.size()==0) {return true;}
-		else {return false;}
+		if (Calendario.size() == 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-	
-	
-	
-	
+
 }
