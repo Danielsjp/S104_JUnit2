@@ -23,5 +23,16 @@ public class CalculoDni {
         System.out.println("DNI COMPLETO: "+numeroDNI+letras[resto]);
         return (char) (letra = letras[resto]);
         //return letra = letras[resto];
+//		return true;
+		
+    }
+    
+    public boolean obtenerOK(){
+        int resto;
+        int letra;
+        resto = numeroDNI % 23;
+        System.out.println("DNI COMPLETO: "+numeroDNI+letras[resto]);
+        if (letras.length>0) return true; else return false;
+        //return letra = letras[resto];
     }
 }
