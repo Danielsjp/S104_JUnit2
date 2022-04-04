@@ -6,10 +6,12 @@ import java.lang.reflect.Array;
 
 import org.junit.jupiter.api.Test;
 
+
+
 class CalculoDniTest {
 
 	@Test
-	void testObtenerLetra() {
+	public void testObtenerLetra() {
 		CalculoDni dni = new CalculoDni(53130984);
 		char letra = dni.obtenerLetra();
 		if (letra == 'H') {
@@ -20,12 +22,13 @@ class CalculoDniTest {
 	}
 
 	@Test
-	void testLote() {
-
+	public void testLote() {
 		int lote[] = new int[] { 53530984, 43130984, 99130984, 53139984, 53130999, 12330984, 53160984, 63130984, 53132984, 73130984 };
 		for (int strTemp : lote) {
+			final char [] letras = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
 			CalculoDni dni = new CalculoDni(strTemp);
-			if (dni.obtenerOK()) {
+			char letra = dni.obtenerLetra();
+			if ( letra == letras[strTemp % 23] ) {
 				System.out.println("Todo OK");
 			} else {
 				System.out.println("Algo ha salido mal");
@@ -34,3 +37,12 @@ class CalculoDniTest {
 	}
 
 }
+
+
+/*
+ * public char obtenerLetra(){ int resto; int letra; resto = numeroDNI % 23;
+ * System.out.println("DNI COMPLETO: "+numeroDNI+letras[resto]); return (char)
+ * (letra = letras[resto]); //return letra = letras[resto]; // return true;
+ * 
+ * }
+ */
